@@ -1,0 +1,81 @@
+@import './variables.css';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+a { 
+    color: inherit; 
+    text-decoration: none; 
+}
+
+button { 
+    font-family: inherit; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-weight: bold; 
+}
+
+.main-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 234px 66px 80px 66px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        /* Mobile: full-width feeling + Abstand unter dem Dock */
+        padding: 140px 16px 90px 16px;
+    }
+}
+
+/* Global Aurora Background */
+.aurora-global {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.6;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    /* Mobile: weniger “abgeschnitten”/hart an den Rändern */
+    .aurora-global {
+        opacity: 0.35;
+        filter: blur(6px);
+        transform: scale(1.1);
+        transform-origin: center;
+        -webkit-mask-image: radial-gradient(circle at 50% 30%, black 0%, black 55%, transparent 78%);
+        mask-image: radial-gradient(circle at 50% 30%, black 0%, black 55%, transparent 78%);
+    }
+}
+

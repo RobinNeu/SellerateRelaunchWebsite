@@ -1,0 +1,28 @@
+:root {
+    --dark-bg: #050505;
+    --text-light: #ededed;
+    --text-dark: #050505;
+    --text-muted: #666;
+    --text-gray-400: #9ca3af;
+
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-border-hover: rgba(0, 240, 255, 0.3);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
+
+    --neon-accent: #00f0ff;
+    --accent-glow: rgba(0, 240, 255, 0.4);
+    --selection-bg: var(--neon-accent);
+    --selection-text: var(--dark-bg);
+
+    --aurora-color-1: #1e3a8a;
+    --aurora-color-2: #164e63;
+
+    --font-sans: 'Inter', 'sans-serif';
+    --font-mono: 'Space Grotesk', 'monospace';
+
+    --animation-speed-fast: 0.1s;
+    --animation-speed-med: 0.3s;
+    --animation-speed-slow: 0.5s;
+}
+

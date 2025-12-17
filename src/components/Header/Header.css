@@ -1,0 +1,219 @@
+/* Header Container */
+.dock-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 2rem;
+    pointer-events: none;
+}
+
+/* Logo */
+.dock-logo {
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    pointer-events: auto;
+}
+
+.dock-logo-img {
+    height: 32px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.2s ease;
+}
+
+.dock-logo:hover .dock-logo-img {
+    opacity: 0.8;
+}
+
+/* Dock Container */
+.dock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: auto;
+}
+
+/* Dock Bar */
+.dock-bar {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem 0.4rem;
+    border-radius: 18px;
+    background: rgba(15, 20, 35, 0.92);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Dock Icon */
+.dock-icon {
+    position: relative;
+    display: flex;
+    aspect-ratio: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.dock-icon:hover,
+.dock-icon.is-active {
+    background: rgba(0, 240, 255, 0.12);
+    border-color: rgba(0, 240, 255, 0.3);
+}
+
+.dock-icon-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.dock-icon-inner svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Tooltip */
+.dock-icon-label {
+    position: absolute;
+    bottom: 0.35rem;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.dock-icon-label.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* Dropdown Menu */
+.dock-dropdown {
+    margin-top: 0.75rem;
+    min-width: 380px;
+    max-width: 600px;
+    padding: 1.25rem;
+    border-radius: 16px;
+    background: rgba(15, 20, 35, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.dock-dropdown-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.dock-dropdown-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.dock-dropdown-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--neon-accent);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dock-dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.dock-dropdown-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.dock-dropdown-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.dock-dropdown-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.dock-dropdown-desc {
+    font-size: 0.78rem;
+    color: var(--text-gray-400);
+    line-height: 1.4;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .dock-header {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .dock-logo {
+        left: 1rem;
+        top: 0.75rem;
+    }
+    
+    .dock-logo-img {
+        height: 22px;
+    }
+    
+    .dock-bar {
+        gap: 0.35rem;
+        padding: 0.4rem 0.6rem 0.35rem;
+    }
+
+    .dock-icon-label {
+        font-size: 0.6rem;
+        letter-spacing: 0.06em;
+    }
+    
+    .dock-dropdown {
+        min-width: calc(100vw - 2rem);
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .dock-bar {
+        gap: 0.25rem;
+        padding: 0.35rem 0.5rem;
+    }
+    
+    .dock-icon {
+        border-radius: 10px;
+    }
+}

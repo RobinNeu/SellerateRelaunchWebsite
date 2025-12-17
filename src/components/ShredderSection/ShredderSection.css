@@ -1,0 +1,27 @@
+.shredder-section {
+    margin-top: 10rem;
+    margin-bottom: 12rem;
+}
+
+.shredder-full {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 116px;
+    padding-bottom: 116px;
+}
+
+.shredder-reveal-title .scroll-reveal-text {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+}
+
+.shredder-reveal-body .scroll-reveal-text {
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    line-height: 1.7;
+    font-weight: 500;
+    color: var(--text-gray-400);
+    max-width: 78ch;
+}

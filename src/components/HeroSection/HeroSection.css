@@ -1,0 +1,160 @@
+.hero-section {
+    margin-bottom: 12rem;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-headline {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .hero-headline { 
+        font-size: 4.75rem; 
+    }
+}
+
+.hero-subheadline {
+    font-size: 1.1rem;
+    color: var(--text-gray-400);
+    max-width: 720px;
+    margin: 0 0 3rem 0;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #ffffff, #a3a3a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero-copy {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Hero Image - Prominent, no card wrapper */
+.hero-visual {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 10;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 
+        0 40px 100px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.hero-metric {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.hero-metric-value {
+    font-family: var(--font-mono);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--neon-accent);
+    text-shadow: 0 0 30px var(--neon-accent);
+}
+
+.hero-metric-label {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 900px) {
+    .hero-layout {
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .hero-copy {
+        max-width: 520px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .hero-visual {
+        flex: 1;
+        max-width: 580px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        margin-bottom: 8rem;
+    }
+    
+    .hero-copy { 
+        text-align: left; 
+    }
+    
+    .hero-headline { 
+        font-size: 2.3rem; 
+    }
+    
+    .hero-subheadline { 
+        font-size: 1rem; 
+    }
+    
+    .hero-metric-value {
+        font-size: 2rem;
+    }
+    
+    .hero-metric-label {
+        font-size: 0.75rem;
+    }
+
+    /* Mehr Luft auf Mobile, damit das Dock nicht “reinläuft” */
+    .hero-layout {
+        gap: 3rem;
+    }
+
+    /* Bild wirklich voll/zentriert */
+    .hero-visual {
+        max-width: 100%;
+    }
+}

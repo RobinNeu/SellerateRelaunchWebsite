@@ -1,0 +1,105 @@
+.evidence-section { 
+    margin-bottom: 12rem; 
+}
+
+.case-study-container {
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    min-height: 260px;
+}
+
+@media (min-width: 900px) {
+    .case-study-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+.case-study-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 240, 255, 0.1), transparent 40%), radial-gradient(circle at 80% 70%, rgba(0, 240, 255, 0.05), transparent 30%);
+    z-index: 1;
+    opacity: 0.4;
+    vertical-align: middle;
+}
+
+.case-study-content {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+    flex: 1;
+}
+
+.case-study-badge {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    background-color: var(--neon-accent);
+    color: var(--dark-bg);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.case-study-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.case-study-text {
+    color: var(--text-gray-400);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.case-study-metric {
+    position: relative;
+    z-index: 2;
+    border-left: 3px solid var(--neon-accent);
+    padding-left: 1.5rem;
+    min-width: 220px;
+    vertical-align: middle;
+}
+
+.metric-value {
+    font-size: 200px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: #fff;
+    line-height: 1;
+    width: 100px;
+    height: 139px;
+    vertical-align: middle;
+}
+
+.metric-label {
+    display: block;
+    font-family: var(--font-mono);
+    color: var(--text-gray-400);
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+}
+
+@media (max-width: 768px) {
+    .case-study-container { 
+        padding: 2.5rem 1.5rem; 
+    }
+    .case-study-metric { 
+        margin-top: 1.5rem; 
+        min-width: 0; 
+    }
+}
+
